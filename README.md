@@ -8,16 +8,16 @@ This study explores data from **120 psychology patients and 17 key symptoms**, l
 ---
 
 ## 📖 **Table of Contents**  
-1. Why This Project
-2. Project Overview
-3. Data Cleaning & Preprocessing
-4. Data Analysis & Feature Exploration
-5. Visualizing Data with Tableau
-6. Insights & Final Report
-7. Tools Used 
-8. Dataset Sources & Provenance
-9. Mental Health Resources  
-10. Stay Connected 
+1. [Why This Project?](#-why-this-project)  
+2. [Project Overview](#-project-overview)  
+3. [Data Cleaning & Preprocessing](#-data-cleaning--preprocessing)  
+4. [Data Analysis & Feature Exploration](#-data-analysis--feature-exploration)  
+5. [Visualizing Data with Tableau](#-visualizing-data-with-tableau)  
+6. [Insights & Final Report](#-insights--final-report)  
+7. [Tools Used](#-tools-used)  
+8. [Dataset Sources & Provenance](#-dataset-sources--provenance)  
+9. [Mental Health Resources](#-mental-health-resources)  
+10. [Stay Connected](#-stay-connected)  
 
 ---
 
