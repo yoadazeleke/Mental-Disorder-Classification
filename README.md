@@ -43,7 +43,7 @@ This project is structured into four key phases:
 - Assigning numeric values to mental health diagnoses.  
 
 ### **2. Data Analysis & Feature Exploration**  
-- Investigating symptom severity across different disorders.  
+- Investigating symptom severity across different disorders using logical regression machine learning model with R.
 - Comparing diagnosis distributions (Bipolar Type 1, Bipolar Type 2, Depression, and Normal).  
 - Creating new scores to quantify mental health symptoms.  
 
@@ -104,7 +104,7 @@ To better analyze mental health trends, four composite symptom scores were intro
 ---
 
 ## 📊 **Data Analysis & Feature Exploration**  
-- Investigating symptom severity across different disorders.  
+- Investigating symptom severity across different disorders using logical regression machine learning model with R.
 - Comparing diagnosis distributions (Bipolar, Depression, Normal).  
 
 *👉 (Details will be updated soon!)*  
