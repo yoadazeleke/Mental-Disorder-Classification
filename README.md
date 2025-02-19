@@ -1,67 +1,72 @@
-# **Mental Disorder Classification (2023): A Data Analysis Project**  
+# **Mental Disorder Classification (2023): A Data Analysis Project**
 
-📌 **Introduction**  
-Mental health is a critical yet often overlooked aspect of well-being. Having worked in behavioral and mental health, I have seen firsthand how psychological symptoms impact individuals' lives. This project combines my background in **psychology, mental health, and data science** to explore patterns in mental disorder symptoms and classifications.  
+## 📌 **Introduction**  
+Mental health is an essential yet often overlooked aspect of well-being. With my background in **psychology, mental health, and data science**, I have witnessed firsthand how psychological symptoms impact individuals' lives. This project integrates these disciplines to analyze patterns in mental disorder symptoms and classifications, aiming to contribute to a deeper understanding of mental health conditions.  
 
-By analyzing data from **120 psychology patients with 17 key symptoms**, I aim to uncover insights that could contribute to a better understanding of mental health conditions.  
+This study explores data from **120 psychology patients and 17 key symptoms**, leveraging **Google Sheets, R, and Tableau** to uncover insights that could aid mental health awareness and research.  
 
----  
+---
 
 ## 📖 **Table of Contents**  
+1. Why This Project
+2. Project Overview
+3. Data Cleaning & Preprocessing
+4. Data Analysis & Feature Exploration
+5. Visualizing Data with Tableau
+6. Insights & Final Report
+7. Tools Used 
+8. Dataset Sources & Provenance
+9. Mental Health Resources  
+10. Stay Connected 
 
-1. **Why This Project?** 
-2. **Project Contents**
-3. **Day 1 - Data Cleaning & Handling Missing Values**
-4. **Day 2 - Data Analysis & Feature Exploration**  
-5. **Day 3 - Visualizing Data with Tableau**
-6. **Day 4 - Insights & Final Report**
-7. **Tools Used** 
-8. **Dataset Sources & Provenance** 
-
----  
+---
 
 ## 🎯 **Why This Project?**  
-
 Mental health disorders are **complex and multifaceted**. A data-driven approach allows us to:  
 
 - Identify **patterns in symptoms** across different mental disorders.  
 - Analyze **relationships** between symptoms and expert diagnoses.  
-- Utilize **Google Sheets, R, and Tableau** to perform exploratory data analysis and visualizations.  
+- Utilize **data science techniques** to perform exploratory data analysis and visualizations.  
 - Contribute to discussions on **mental health awareness** through data storytelling.  
 
----  
+My firsthand experience working with patients struggling with severe mental health and substance use disorders has shown me the importance of early symptom identification and accurate diagnoses. This project aims to bridge the gap between data science and mental health awareness.
 
-## 📂 **Project Contents**  
+---
 
-Each phase of the project is carefully documented, covering **data preparation, analysis, and visualization**:  
+## 📂 **Project Overview**  
+This project is structured into four key phases:
 
-### **Day 1 - Data Cleaning & Handling Missing Values**  
-- Preprocessing raw patient data  
-- Structuring symptom data into numerical and categorical formats  
+### **1. Data Cleaning & Preprocessing**  
+- Removing unnecessary columns (e.g., patient IDs).  
+- Converting text-based responses into numerical values for analysis.  
+- Standardizing Yes/No responses for consistency.  
+- Assigning numeric values to mental health diagnoses.  
 
-### **Day 2 - Data Analysis & Feature Exploration**  
-- Investigating symptom severity across different disorders  
-- Comparing diagnosis distributions (Bipolar Type 1, Bipolar Type 2, Depression, and Normal)  
+### **2. Data Analysis & Feature Exploration**  
+- Investigating symptom severity across different disorders.  
+- Comparing diagnosis distributions (Bipolar Type 1, Bipolar Type 2, Depression, and Normal).  
+- Creating new scores to quantify mental health symptoms.  
 
-### **Day 3 - Visualizing Data with Tableau**  
-- Creating dashboards to illustrate symptom trends  
-- Highlighting correlations between symptoms and diagnoses  
+### **3. Visualizing Data with Tableau**  
+- Developing interactive dashboards to illustrate symptom trends.  
+- Highlighting correlations between symptoms and diagnoses.  
 
-### **Day 4 - Insights & Final Report**  
-- Summarizing key findings from the dataset  
-- Discussing potential **real-world applications** of the analysis  
+### **4. Insights & Final Report**  
+- Summarizing key findings.  
+- Discussing potential real-world applications.  
 
----  
+🔗 **📎 Dataset Link:** [Google Sheets Dataset](https://docs.google.com/spreadsheets/d/148BXUigQAvB5ID8VKiW5NMGWYK8hgyVnn6YMBGEKIRE/edit?usp=sharing)  
 
-## 📊 **Day 1 - Data Cleaning & Handling Missing Values**  
+---
 
-To ensure the dataset is **structured and ready for analysis**, I focused on **cleaning and organizing the data**. Here’s what I did:  
+## 📊 **Data Cleaning & Preprocessing**  
+To ensure the dataset is structured for effective analysis, the following steps were taken:  
 
 ### **1. Removed Unnecessary Data**  
-- **Removed the "Patient Number" column** since it wasn’t useful for analysis.  
+- The **"Patient Number"** column was removed as it did not contribute to the analysis.  
 
-### **2. Converted Text Responses to Numbers**  
-Some symptom responses were in text format (e.g., "Usually," "Sometimes," "Seldom"), which can be difficult for machine learning models to process. I **converted them into a numerical scale (0 to 4)**:  
+### **2. Converted Text Responses to Numerical Values**  
+Some symptom responses were originally in text format (e.g., "Usually," "Sometimes," "Seldom"). These were converted into a numerical scale for consistency:  
 
 | Text Response  | Numeric Value |
 |---------------|--------------|
@@ -69,17 +74,17 @@ Some symptom responses were in text format (e.g., "Usually," "Sometimes," "Seldo
 | Usually       | 3            |
 | Sometimes     | 2            |
 | Seldom        | 1            |
-| No           | 0            |
-| Yes          | 1            |
+| No            | 0            |
+| Yes           | 1            |
 
-### **3. Standardized Yes/No Answers**  
-Columns like "Mood Swing" or "Suicidal Thoughts" had **Yes/No answers**, so I standardized them as follows:  
+### **3. Standardized Yes/No Responses**  
+Columns such as **"Mood Swing"** and **"Suicidal Thoughts"** originally contained Yes/No answers. These were converted to numerical values:  
 
 - **Yes → 1**  
 - **No → 0**  
 
-### **4. Organized Diagnoses for Machine Learning**  
-The **"Expert Diagnose"** column originally contained text labels like "Bipolar Type-2" and "Depression." To make it **easier for machine learning models to process**, I assigned numerical values:  
+### **4. Assigned Numeric Values to Diagnoses**  
+To facilitate analysis, categorical diagnoses were converted to numerical labels:  
 
 | Diagnosis        | Numeric Value |
 |-----------------|--------------|
@@ -88,53 +93,46 @@ The **"Expert Diagnose"** column originally contained text labels like "Bipolar 
 | Depression      | 1            |
 | Normal         | 0            |
 
-### **5. Created New Scores to Identify Patterns**  
-To **better understand symptom patterns**, I grouped related symptoms into **four new scores**:  
+### **5. Created Symptom Scores**  
+To better analyze mental health trends, four composite symptom scores were introduced:  
 
-- **Mood Instability Score** – Measures **mood swings, sadness, and euphoria**  
-- **Cognitive Functioning Score** – Assesses **overthinking, concentration, and optimism**  
-- **Sleep Issues Score** – Tracks **exhaustion and sleep disorders**  
-- **Self-Harm Risk Score** – Highlights signs of **self-harm risk** (e.g., suicidal thoughts, nervous breakdowns)  
-
-💾 **📎 Dataset Link:** [Google Sheets Dataset](https://docs.google.com/spreadsheets/d/148BXUigQAvB5ID8VKiW5NMGWYK8hgyVnn6YMBGEKIRE/edit?usp=sharing)  
-
-This **cleaned and structured dataset** is now ready for further analysis! 🚀  
+- **Mood Instability Score** – Measures **mood swings, sadness, and euphoria**.  
+- **Cognitive Functioning Score** – Assesses **overthinking, concentration, and optimism**.  
+- **Sleep Issues Score** – Tracks **exhaustion and sleep disorders**.  
+- **Self-Harm Risk Score** – Highlights signs of **self-harm risk** (e.g., suicidal thoughts, nervous breakdowns).  
 
 ---
 
-## 📊 **Day 2 - Data Analysis & Feature Exploration**  
-
-🔍 Investigating symptom severity across different disorders  
-📊 Comparing diagnosis distributions (Bipolar, Depression, Normal)  
+## 📊 **Data Analysis & Feature Exploration**  
+- Investigating symptom severity across different disorders.  
+- Comparing diagnosis distributions (Bipolar, Depression, Normal).  
 
 *👉 (Details will be updated soon!)*  
 
 ---
 
-## 📊 **Day 3 - Visualizing Data with Tableau**  
+## 📊 **Visualizing Data with Tableau**  
+- Creating interactive Tableau dashboards to illustrate findings.  
+- Identifying correlations between symptoms and diagnoses.  
 
-🎨 **Tableau Dashboards** for clear mental health insights  
 🔗 *Stay tuned for visualizations!*  
 
 ---
 
-## 📊 **Day 4 - Insights & Final Report**  
-
-📝 Summarizing key findings  
-💡 Discussing real-world applications  
+## 📊 **Insights & Final Report**  
+- Summarizing key findings.  
+- Discussing real-world applications of the data.  
 
 ---
 
 ## 🚀 **Tools Used**  
-
-- **Google Sheets** – Initial data exploration and cleaning  
-- **R** – Statistical analysis and machine learning preparation  
-- **Tableau** – Data visualization and storytelling  
+- **Google Sheets** – Data entry and preprocessing.  
+- **R** – Statistical analysis and data transformation.  
+- **Tableau** – Data visualization and insights.  
 
 ---
 
 ## 📌 **Dataset Sources & Provenance**  
-
 This dataset originates from a **private psychology clinic** and has been made publicly available for research and analysis.  
 
 🔗 **Primary Source:** [Harvard Dataverse](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/0FNET5)  
@@ -142,7 +140,18 @@ This dataset originates from a **private psychology clinic** and has been made p
 
 ---
 
-🎭 **Bridging Psychology & Data Science**  
-This project showcases how **data science and psychology** intersect to provide meaningful insights into **mental health**. Let's explore mental disorders through data! 🧠📊  
+## 🧠 **Mental Health Resources**  
+If you or someone you know is struggling, support is available:  
+
+- [988 Suicide & Crisis Lifeline](https://988lifeline.org/) – Call or text **988** (U.S.).  
+- [National Alliance on Mental Illness (NAMI)](https://www.nami.org/) – Mental health advocacy.  
+- [Crisis Text Line](https://www.crisistextline.org/) – Text **HOME** to **741741** for 24/7 support.  
+- [Befrienders Worldwide](https://www.befrienders.org/) – International mental health support.  
+- [WHO Mental Health Resources](https://www.who.int/health-topics/mental-health) – Global mental health guidelines.  
+
+💜 **You are not alone.**  
 
 ---
+
+## 📢 **Stay Connected!**  
+📩 Want to discuss this project or collaborate? Reach out via [LinkedIn](https://www.linkedin.com/in/yoadabzeleke/)!  
