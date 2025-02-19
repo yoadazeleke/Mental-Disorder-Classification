@@ -9,15 +9,14 @@ By analyzing data from **120 psychology patients with 17 key symptoms**, I aim t
 
 ## 📖 **Table of Contents**  
 
-1. **Introduction**
-2. **Why This Project?** 
-3. **Project Contents**
-4. **Day 1 - Data Cleaning & Handling Missing Values**
-5. **Day 2 - Data Analysis & Feature Exploration**  
-6. **Day 3 - Visualizing Data with Tableau**
-7. **Day 4 - Insights & Final Report**
-8. **Tools Used** 
-9. **Dataset Sources & Provenance** 
+1. **Why This Project?** 
+2. **Project Contents**
+3. **Day 1 - Data Cleaning & Handling Missing Values**
+4. **Day 2 - Data Analysis & Feature Exploration**  
+5. **Day 3 - Visualizing Data with Tableau**
+6. **Day 4 - Insights & Final Report**
+7. **Tools Used** 
+8. **Dataset Sources & Provenance** 
 
 ---  
 
